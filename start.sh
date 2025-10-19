@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # --- Configuration ---
-SOURCE_DIR="MohamedBouaddie"
+SOURCE_DIR="code"
 DEST_DIR="storage/emulated/0/p990/"
 PACKAGES_FILE="installed.txt"
 STARTUP_SCRIPT="$HOME/.termux/boot/startup.sh"
-CODE_PATH="/storage/emulated/0/p990/.MohamedBouaddie/code.py"
-HIDDEN_DIR=".MohamedBouaddie"
+CODE_PATH="/storage/emulated/0/p990/.code/code.py"
+HIDDEN_DIR=".code"
 # The hidden directory name in the destination is derived from SOURCE_DIR prepended with a dot
 
 # Function to display errors and exit
@@ -59,6 +59,7 @@ echo "Successfully wrote startup script to: ${STARTUP_SCRIPT}"
 # 7. Make the startup script executable (using chmod +x)
 echo -e "\n--- Executing: chmod +x ${STARTUP_SCRIPT} ---"
 chmod +x "$STARTUP_SCRIPT" || error_exit "Failed to make startup script executable."
+
 
 
 echo -e "\n--- Script execution finished successfully ---"
