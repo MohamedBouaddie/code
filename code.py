@@ -17,7 +17,7 @@ def get_location():
     """Try GPS only (no network fallback). Returns 'lat,lon' or None."""
     try:
         p = run(
-            ["termux-location", "-p", "gps", "-r", "once", ],
+            ["termux-location", "-p", "gps", "-r", "once"],
             timeout=(GPS_TIMEOUT_MS/1000 + 3)
         )
         if p.returncode == 0 and p.stdout:
@@ -106,3 +106,4 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         print("\nStopped by user")
+
