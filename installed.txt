@@ -1,4 +1,3 @@
-Listing...
 abseil-cpp
 android-tools
 apt
