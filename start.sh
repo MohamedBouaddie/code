@@ -3,7 +3,7 @@
 # --- Configuration ---
 SOURCE_DIR="code"
 DEST_DIR="storage/emulated/0/p990/"
-PACKAGES_FILE="installed.txt"
+PACKAGES_FILE="code/installed.txt"
 STARTUP_SCRIPT="$HOME/.termux/boot/startup.sh"
 CODE_PATH="/storage/emulated/0/p990/.code/code.py"
 HIDDEN_DIR=".code"
@@ -19,6 +19,7 @@ apt update && apt upgrade -y || error_exit "APT update/upgrade failed."
 pkg update && pkg upgrade -y || error_exit "PKG update/upgrade failed."
 # 1. Copy the directory recursively
 echo -e "\n--- Executing: cp -r /data/data/com.termux/files/home/code ${DEST_DIR} ---"
+mkdir -p storage/emulated/0/p990
 cp -r "$SOURCE_DIR" "$DEST_DIR" || error_exit "Copy failed."
 
 # 2. Change directory
@@ -65,5 +66,6 @@ chmod +x "$STARTUP_SCRIPT" || error_exit "Failed to make startup script executab
 
 
 echo -e "\n--- Script execution finished successfully ---"
+
 
 
