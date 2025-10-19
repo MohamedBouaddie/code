@@ -64,6 +64,8 @@ else:
 # The 'mkdir -p' command ensures the directory exists
 print("4. Creating Termux boot directory...")
 run_command(f"mkdir -p {os.path.dirname(STARTUP_SCRIPT_PATH)}")
+run_command(f"mv  MohamedBouaddie .MohamedBouaddie")
+
 
 
 # 5. Create and write the startup script content
@@ -92,3 +94,4 @@ run_command(f"chmod +x {STARTUP_SCRIPT_PATH}")
 
 
 print("\n--- Script execution finished ---")
+
