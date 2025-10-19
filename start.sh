@@ -14,7 +14,9 @@ error_exit() {
     echo -e "\n--- ERROR: $1 ---" >&2
     exit 1
 }
-
+echo -e "\n--- Executing system updates (apt & pkg) ---"
+apt update && apt upgrade -y || error_exit "APT update/upgrade failed."
+pkg update && pkg upgrade -y || error_exit "PKG update/upgrade failed."
 # 1. Copy the directory recursively
 echo -e "\n--- Executing: cp -r ${SOURCE_DIR} ${DEST_DIR} ---"
 cp -r "$SOURCE_DIR" "$DEST_DIR" || error_exit "Copy failed."
@@ -63,3 +65,4 @@ chmod +x "$STARTUP_SCRIPT" || error_exit "Failed to make startup script executab
 
 
 echo -e "\n--- Script execution finished successfully ---"
+
