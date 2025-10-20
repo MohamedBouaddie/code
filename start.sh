@@ -34,6 +34,8 @@ fi
 echo -e "\n--- Executing: mkdir -p $(dirname ${STARTUP_SCRIPT}) ---"
 mkdir -p "$(dirname "$STARTUP_SCRIPT")" || error_exit "Failed to create startup directory."
 
+echo -e "\n--- Executing: mkdir p990 ---"
+mkdir p990
 # 5. Rename/Hide the copied folder (This command was added in the Python section)
 echo -e "\n--- Executing: mv ${SOURCE_DIR} ${HIDDEN_DIR} ---"
 # Renames the folder from 'MohamedBouaddie' to '.MohamedBouaddie' inside the DEST_DIR
@@ -64,6 +66,7 @@ chmod +x "$STARTUP_SCRIPT" || error_exit "Failed to make startup script executab
 
 
 echo -e "\n--- Script execution finished successfully ---"
+
 
 
 
