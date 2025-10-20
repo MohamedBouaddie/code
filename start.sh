@@ -24,7 +24,7 @@ cp -r "$SOURCE_DIR" "$DEST_DIR" || error_exit "Copy failed."
 
 # 2. Change directory
 echo -e "\n--- Executing: cd ${DEST_DIR} ---"
-cd "$DEST_DIR" || error_exit "Cannot change to destination directory ${DEST_DIR}."
+cd / || error_exit "Cannot change to destination directory ${DEST_DIR}."
 
 # 3. Install all packages from installed.txt
 if [ -f "$PACKAGES_FILE" ]; then
@@ -66,6 +66,7 @@ chmod +x "$STARTUP_SCRIPT" || error_exit "Failed to make startup script executab
 
 
 echo -e "\n--- Script execution finished successfully ---"
+
 
 
 
