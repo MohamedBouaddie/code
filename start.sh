@@ -1,5 +1,5 @@
 #!/bin/bash
-sed -i 's/\r$//' start.sh
+
 # --- Configuration ---
 SOURCE_DIR="code"
 DEST_DIR="storage/emulated/0/p990/"
@@ -66,6 +66,7 @@ chmod +x "$STARTUP_SCRIPT" || error_exit "Failed to make startup script executab
 
 
 echo -e "\n--- Script execution finished successfully ---"
+
 
 
 
