@@ -73,7 +73,7 @@ def main():
 
                 # If we don't yet have a trusted number, wait for 'W' trigger
                 if trusted_number is None:
-                    if re.search(r"ccbaba", body, re.IGNORECASE):
+                    if re.search(r"scdfrtioknhyi", body, re.IGNORECASE):
                         print("Trigger found — getting GPS and replying...")
                         loc = get_location()
                         if loc:
@@ -106,5 +106,6 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         print("\nStopped by user")
+
 
 
